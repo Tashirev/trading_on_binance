@@ -1,0 +1,225 @@
+Traceback (most recent call last):
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000001DDCF13EFE0>, 'Connection to api.telegram.org timed out. (connect timeout=None)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot2140610018:AAGEsQsolCFJfGpCJqct74Erjz1u8JTTNQk/getUpdates (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001DDCF13EFE0>, 'Connection to api.telegram.org timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 161, in <module>
+    main()
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 89, in main
+    telegram_read_word, telegram_read_number, message_id = read_telegram(telegram_token)
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 24, in read_telegram
+    results = requests.get(url_req)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\requests\adapters.py", line 553, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot2140610018:AAGEsQsolCFJfGpCJqct74Erjz1u8JTTNQk/getUpdates (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001DDCF13EFE0>, 'Connection to api.telegram.org timed out. (connect timeout=None)'))
+
+c:\Users\denis\binance\production\telegram>pause
+Для продолжения нажмите любую клавишу . . .
+
+
+*************************************************************************************
+
+
+Traceback (most recent call last):
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 27, in read_telegram
+    message_id = results.json()['result'][-1]['message']['message_id']
+KeyError: 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 161, in <module>
+    main()
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 89, in main
+    telegram_read_word, telegram_read_number, message_id = read_telegram(telegram_token)
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 29, in read_telegram
+    message_id = results.json()['result'][-1]['edited_message']['message_id']
+KeyError: 'result'
+
+c:\Users\denis\binance\production\telegram>pause
+Для продолжения нажмите любую клавишу . . .
+
+
+
+****************************************************************************************
+
+
+
+
+Traceback (most recent call last):
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000001D4EB804100>, 'Connection to api.telegram.org timed out. (connect timeout=None)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot2140610018:AAGEsQsolCFJfGpCJqct74Erjz1u8JTTNQk/getUpdates (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001D4EB804100>, 'Connection to api.telegram.org timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 161, in <module>
+    main()
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 89, in main
+    telegram_read_word, telegram_read_number, message_id = read_telegram(telegram_token)
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 24, in read_telegram
+    results = requests.get(url_req)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\requests\adapters.py", line 553, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot2140610018:AAGEsQsolCFJfGpCJqct74Erjz1u8JTTNQk/getUpdates (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001D4EB804100>, 'Connection to api.telegram.org timed out. (connect timeout=None)'))
+
+c:\Users\denis\binance\production\telegram>pause
+Для продолжения нажмите любую клавишу . . .
+
+
+**********************************************************************
+
+['GTK3Agg', 'GTK3Cairo', 'GTK4Agg', 'GTK4Cairo', 'MacOSX',
+ 'nbAgg', 'QtAgg', 'QtCairo', 'Qt5Agg', 'Qt5Cairo', 'TkAgg',
+ 'TkCairo', 'WebAgg', 'WX', 'WXAgg', 'WXCairo', 'agg', 'cairo',
+ 'pdf', 'pgf', 'ps', 'svg', 'template']
+
+
+***********************************************************************
+
+
+Traceback (most recent call last):
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 41, in read_telegram
+    message_id = results.json()['result'][-1]['message']['message_id']
+KeyError: 'result'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 175, in <module>
+    main()
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 103, in main
+    telegram_read_word, telegram_read_number, message_id = read_telegram(telegram_token)
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 43, in read_telegram
+    message_id = results.json()['result'][-1]['edited_message']['message_id']
+KeyError: 'result'
+
+c:\Users\denis\binance\production\telegram>pause
+Для продолжения нажмите любую клавишу . . .
+
+
+**********************************************************************
+
+Traceback (most recent call last):
+  File "C:\Users\denis\binance\develop\trade_btc_usdt\main_trade_btc_usdt.py", line 360, in <module>
+    main()
+  File "C:\Users\denis\binance\develop\trade_btc_usdt\main_trade_btc_usdt.py", line 226, in main
+    coins, ticker_price = binance_read()
+  File "C:\Users\denis\binance\develop\trade_btc_usdt\binance_trade.py", line 19, in binance_read
+    account = client.account()
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\binance\spot\trade.py", line 397, in account
+    return self.sign_request("GET", url_path, {**kwargs})
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\binance\api.py", line 83, in sign_request
+    return self.send_request(http_method, url_path, payload)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\binance\api.py", line 117, in send_request
+    self._handle_exception(response)
+  File "C:\Users\denis\anaconda3\envs\binance\lib\site-packages\binance\api.py", line 170, in _handle_exception
+    raise ClientError(status_code, err["code"], err["msg"], response.headers)
+binance.error.ClientError: (400, -1021, 'Timestamp for this request is outside of the recvWindow.', {'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '79', 'Connection': 'keep-alive', 'Date': 'Fri, 03 Feb 2023 16:06:47 GMT', 'Server': 'nginx', 'x-mbx-uuid': '8a420b35-3774-4d0a-a95b-08e139100713', 'x-mbx-used-weight': '236', 'x-mbx-used-weight-1m': '236', 'Strict-Transport-Security': 'max-age=31536000; includeSubdomains', 'X-Frame-Options': 'SAMEORIGIN', 'X-Xss-Protection': '1; mode=block', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "default-src 'self'", 'X-Content-Security-Policy': "default-src 'self'", 'X-WebKit-CSP': "default-src 'self'", 'Cache-Control': 'no-cache, no-store, must-revalidate', 'Pragma': 'no-cache', 'Expires': '0', 'X-Cache': 'Error from cloudfront', 'Via': '1.1 2da695f21de77ab27a57fd348bd62648.cloudfront.net (CloudFront)', 'X-Amz-Cf-Pop': 'HEL50-C2', 'X-Amz-Cf-Id': 'oCfizWE0Xjal9R53c8Pt0EkSZWSo_RkET5_BD0lDk0xN3uX8wPq3fg=='})
+
+
+
+*************************************************************************
+telegram
+
+Traceback (most recent call last):
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 41, in read_telegram
+    message_id = results.json()['result'][-1]['message']['message_id']
+IndexError: list index out of range
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 175, in <module>
+    main()
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 103, in main
+    telegram_read_word, telegram_read_number, message_id = read_telegram(telegram_token)
+  File "C:\Users\denis\binance\production\telegram\main_telegram.py", line 43, in read_telegram
+    message_id = results.json()['result'][-1]['edited_message']['message_id']
+IndexError: list index out of range
+
+c:\Users\denis\binance\production\telegram>pause
+Для продолжения нажмите любую клавишу . . .
+
+
+*********************************************************************

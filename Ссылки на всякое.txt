@@ -1,0 +1,11 @@
+Пример на TensorFlow
+https://www.youtube.com/watch?v=GFSiL6zEZF0
+
+catboost
+https://www.youtube.com/watch?v=xl1fwCza9C8
+
+yandex ML shool
+https://academy.yandex.ru/handbook/ml
+
+контрастивное обучение
+https://lilianweng.github.io/posts/2021-05-31-contrastive/
