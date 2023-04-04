@@ -1,9 +1,0 @@
-{
-  "RANDOM": 1111,
-  "IMAGE_LENGTH": 100,
-  "FEATURES_LENGTH": 600,
-  "BATCH_SIZE": 4096,
-  "EPOCH": 501,
-  "FEE": 0.001,
-  "SLIP_N": 4
-}

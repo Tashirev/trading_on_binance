@@ -1,5 +1,8 @@
-from binance.spot import Spot
+import sys
+sys.path.append('..')
 from config_read import *
+
+from binance.spot import Spot
 
 config_binance = config('binance')['trade']
 coins_binance = ["BTC", "ETH", "BNB"]

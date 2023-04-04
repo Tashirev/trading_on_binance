@@ -1,6 +1,9 @@
+import sys
+sys.path.append('..')
+from config_read import *
+
 import pandas as pd
 from sqlalchemy import create_engine
-from config_read import *
 
 config_bin_dev = config('postgres')['binance']
 engine = create_engine(f"postgresql+psycopg2://"

@@ -1,7 +1,9 @@
 # функиця запроса признаков с API binance
+import sys
+sys.path.append('..')
+from config_read import *
 
 from binance.spot import Spot
-from config_read import *
 
 config_binance = config('binance')['trade']
 client = Spot(key=config_binance['key'], secret=config_binance['secret'])

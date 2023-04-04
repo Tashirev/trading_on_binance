@@ -24,6 +24,10 @@
       "user_name": "postgres",
       "password": "1234qwerty"
     }
+  },
+  "telegram": {
+    "token": "2140610018:AAGEsQsolCFJfGpCJqct74Erjz1u8JTTNQk",
+    "chat_id": 1580412343
   }
 }
 

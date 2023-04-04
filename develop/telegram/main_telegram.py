@@ -91,8 +91,9 @@ def read_settings_sql(engine):
 
 def main():
     print('Telegram bot')
-    telegram_token = '2140610018:AAGEsQsolCFJfGpCJqct74Erjz1u8JTTNQk'
-    chat_id = 1580412343
+    config_telegram = config('telegram')
+    telegram_token = config_telegram['token']
+    chat_id = config_telegram['chat_id']
     message_id_last = None
     settings_time_last, trading_on_last, start_last, part_last, fee_last, profit_fee_coef_last, trade_move_coef_last, centralization_last = read_settings_sql(engine)
 

@@ -4,8 +4,6 @@ from sql_wallet_model import *
 Session = sessionmaker(bind = engine)
 session = Session()
 
-
-
 def sql_walet_write(server_time, coins_wallet, prices_usdt):
 
     # получение id последней записи в таблице

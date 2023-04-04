@@ -6,8 +6,6 @@ from sql_trade_model import *
 Session = sessionmaker(bind = engine)
 session = Session()
 
-
-
 def sql_trade_write(local_time, period_time, predict, volume_status, profit_fee_status,
                     min_order_status, volume_before, fee_usdt, part,
                     slip_n, profit_fee_coef, btc_usdt_min_trade_count,
