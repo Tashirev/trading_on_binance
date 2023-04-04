@@ -1,5 +1,8 @@
+/.idea/
 /.ipynb_checkpoints/
 /catboost_info/
 /treasury/
+/temp/
+/__pycache__/
 config_connect.json
 config_model.json
