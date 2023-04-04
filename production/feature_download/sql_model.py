@@ -1,6 +1,6 @@
 # создание модели базы данных под запись признаков полученных с binance
 import sys
-sys.path.append('..')
+sys.path.append('C:/Users/denis/binance')
 from config_read import *
 
 from sqlalchemy import create_engine, Column, Integer, String, TIMESTAMP, ARRAY, BigInteger

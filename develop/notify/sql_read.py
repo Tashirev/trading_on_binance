@@ -1,5 +1,5 @@
 import sys
-sys.path.append('..')
+sys.path.append('C:/Users/denis/binance')
 from config_read import *
 
 import pandas as pd
