@@ -4,7 +4,6 @@ from sql_labels_read_write import *
 def main():
 
     print('Start create labels.')
-    print('testing gitignore')
 
     pairs_name = ['bnb_btc', 'eth_btc', 'bnb_eth']
 
