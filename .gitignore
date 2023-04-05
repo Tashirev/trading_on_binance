@@ -1,3 +1,7 @@
+/.idea/
+/.ipynb_checkpoints/
+/catboost_info/
+/treasury/
 config_connect.json
 config_model.json
 24h_depth_boost.ipynb
