@@ -4,5 +4,8 @@
 /treasury/
 /temp/
 /__pycache__/
+.gitignore
+ignore_test.py
 config_connect.json
 config_model.json
+24h_depth_boost.ipynb
