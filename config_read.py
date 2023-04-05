@@ -3,7 +3,6 @@
 import json
 import os
 
-
 def config(service):
     basedir = os.path.abspath(os.getcwd())
     workbooks_dir = os.path.abspath(os.path.join(basedir, '../..'))

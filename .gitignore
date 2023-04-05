@@ -1,4 +1,11 @@
-ignore_test.py
 config_connect.json
 config_model.json
 24h_depth_boost.ipynb
+binance_model v.6.ipynb
+btc_usdt_corr.ipynb
+MinMaxScaler_ImageNet.ipynb
+MinScaler_ImageNet.ipynb
+profit_calculation.ipynb
+telegram.ipynb
+temp.txt
+various_links.txt
