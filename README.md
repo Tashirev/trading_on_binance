@@ -1,11 +1,12 @@
 # trading_on_binance
 Набор микросервисов:
   1) feature_download
-  2) trade_btc_usdt
-  3) trade
-  4) telegram
-  5) labels
-
 <div id="header" align="center">
-  <img src="img\rogaine_optimal_way.jpg" width="1000"/>
+<img src="img\feature_download.jpg" width="1000"/>
 </div>
+  3) trade_btc_usdt
+  4) trade
+  5) telegram
+  6) labels
+
+
