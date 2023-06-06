@@ -1,12 +1,15 @@
 # функиця запроса признаков с API binance
+import os
 import sys
-sys.path.append('C:/Users/denis/binance')
+sys.path.insert(0, os.path.abspath("../../"))
+#sys.path.insert(0, os.path.abspath("/home/denis/binance/"))
+#sys.path.append('C:/Users/denis/binance')
 from config_read import *
-
 from binance.spot import Spot
 
 config_binance = config('binance')['trade']
-client = Spot(key=config_binance['key'], secret=config_binance['secret'])
+client = Spot(api_key=config_binance['key'], api_secret=config_binance['secret'])
+#client = Spot(key=config_binance['key'], secret=config_binance['secret'])
 pairs_binance = ["BTCUSDT","ETHUSDT","BNBUSDT","BNBBTC","ETHBTC","BNBETH"]
 pairs_name = ['btc_usdt','eth_usdt','bnb_usdt','bnb_btc','eth_btc','bnb_eth']
 
