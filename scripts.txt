@@ -24,3 +24,15 @@ kubectl apply -f binance/production/feature_download/pod-feature-download.yaml
 # pod нельзя остановить, только удалить
 
 kubectl delete -f binance/production/feature_download/pod-feature-download.yaml
+
+# смена image в deployment K8s (полезно для Jenkins)
+
+kubectl set image deployment/denis-deployment k8sphp=adv4000/k8sphp:latest --record
+
+# перезапуск deployment для подхвата нового image
+
+kubectl rollout restart deployment/denis-deployment
+
+# откат на на прошлую версию deployment при неудачной смене image прошлой командой
+
+kubectl rollout undo deployment/denis-deployment
