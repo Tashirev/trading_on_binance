@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: feature-download-deployment
+  labels:
+    env  : binance
+    app  : main_features
+    owner: DenisTashirev
+    task : read_tick_from_binance
+    run_from: deployment-feature-download.yaml
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        project: binance
+    template:
+      metadata:
+        labels:
+          project: binance
+      spec:
+        containers:
+          - name : feature-download
+            image: feature_download:v1
