@@ -1,0 +1,26 @@
+# Добавление пользователя в группу Docker
+
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+
+# Запуск контейнера в K8s
+
+eval $(minikube docker-env)
+docker build -f production/feature_download/Dockerfile . -tfeature_download:v1
+kubectl run pod-feature-download --image=feature_download:v1 --image-pull-policy=Never
+
+# Запуск minikube dashboard
+
+minikube dashboard
+
+# Вход в командный режим контейнера в K8s
+
+kubectl exec -it pod-feature-download sh
+
+# запуск контейнера в K8s через манифест yaml
+
+kubectl apply -f binance/production/feature_download/pod-feature-download.yaml
+
+# pod нельзя остановить, только удалить
+
+kubectl delete -f binance/production/feature_download/pod-feature-download.yaml

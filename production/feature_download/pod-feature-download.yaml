@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: feature-download
+  labels:
+    env  : binance
+    app  : main_features
+    owner: DenisTashirev
+    task : read_tick_from_binance
+spec:
+  containers:
+    - name : feature-download
+      image: feature_download:v1
