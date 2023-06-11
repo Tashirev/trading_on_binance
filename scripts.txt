@@ -25,6 +25,10 @@ kubectl apply -f binance/production/feature_download/pod-feature-download.yaml
 
 kubectl delete -f binance/production/feature_download/pod-feature-download.yaml
 
+# запуск deployment
+
+
+
 # смена image в deployment K8s (полезно для Jenkins)
 
 kubectl set image deployment/denis-deployment k8sphp=adv4000/k8sphp:latest --record
