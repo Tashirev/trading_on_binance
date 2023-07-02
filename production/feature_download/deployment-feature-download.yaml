@@ -20,4 +20,4 @@ spec:
     spec:
       containers:
         - name : feature-download
-          image: feature_download:v1
+          image: feature_download:v2

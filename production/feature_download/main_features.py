@@ -26,6 +26,7 @@ def main():
     loger_stdout.info(f'***** Binance features to SQL start {ctime()}')
     ticker_count = last_ticker() + 1 # должно быть значение послекднего тикера из БД ticker столбец id_ticker +1
 
+
     while True:
         try:
             # запрос данных из binance
