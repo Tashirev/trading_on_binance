@@ -3,3 +3,4 @@ binance-connector
 psycopg2-binary
 fastapi[all]
 alembic
+asyncpg
