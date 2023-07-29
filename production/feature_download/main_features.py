@@ -39,8 +39,8 @@ def main():
             ticker_count += 1
             sleep(0.5)
             loger_stdout.info(f'SQL status: {sql_status}, ticker_count: {ticker_count}, time: {server_time}')
-        except Exception as exc:
-            loger_stdout.info(f'exc')
+        except Exception as exception:
+            loger_stdout.info(exception)
 
 if __name__ == '__main__':
     main()
